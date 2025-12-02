@@ -1,0 +1,166 @@
+//Estrutura Condicional if
+
+// serve para controlar o caminho que o codigo vai seguir
+
+// if (expressão) {bloco de codigo}              o codigo vai ser executado quando a expressao retornar um true
+
+let  temperature = 11
+
+if (temperature >= 23) {
+    console.log("Está muito quente lá fora!");
+} else {
+    console.log("A temperatura está agradável.")
+}
+
+// next example ----
+
+
+let grade = 5
+
+if (grade >= 9) {
+    console.log("Aprovado!")    
+} else if (grade >= 7) {
+    console.log("Aprovado na média. ")
+} else  
+    console.log("Reprovado. Prepare-se para a próxima.")
+
+
+// next example
+
+const sideA = 42
+const sideB = 4
+const sideC = 41
+
+if (sideA === sideB && sideB ===sideC) {
+    console.log("O triângulo é equitlátero.");
+} else if (sideA === sideB || sideB === sideC || sideA === sideC) {
+    console.log("O triângulo é isósceles")
+} else {
+    console.log("O triângulo é escaleno")
+}
+
+---------------------------
+// example 2
+
+/*const rl = require("readLine") 
+
+const prompt = rl.createInterface({ 
+    input: process.stdin, output: process.stdout 
+});
+
+prompt.question("Digite sua idade: ", (answer) >= { 
+    const age = Number.parseInt(answer)
+    if (Number.isNan(age)){ 
+        console.log("O que você digitou não é um número válido!"); 
+     } else { 
+        console.log(`A sua idade e ${age}`);
+        console.log(`'Daqui 4 anos sua idade sera ${age + 4}`);
+        console.log(`Daqui 10 anos sua idade sera ${age + 10}`);
+     }
+     prompt.close(); 
+}) */
+
+     const readline = require("readline");
+
+    const prompt = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+prompt.question("Digite sua idade: ", (answer) => {
+    const age = Number.parseInt(answer);
+
+    if (Number.isNaN(age)) {
+        console.log("O que você digitou não é um número válido!");
+    } else {
+        console.log(`A sua idade é ${age}`);
+        console.log(`Daqui 4 anos sua idade será ${age + 4}`);
+        console.log(`Daqui 10 anos sua idade será ${age + 10}`);
+    }
+
+    // Fechar a interface após a execução
+    prompt.close();
+});
+
+-----------------------------------------------------------------------------
+
+// PROGRAMA DE EXEMPLO if
+
+
+
+     const readline = require("readline");
+
+    const prompt = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+    });
+
+    let bank = 3000
+    console.log(`Valor total no banco: ${bank}`)
+    prompt.question("Digite o valor que deseja transferir: ", (answer) => {
+        const ammount = Number.parseInt(answer);
+        if (Number.isNaN(ammount)){
+            console.log("O que voce digitou não é um número válido!")
+        } else if (ammount > bank) {
+            console.log("O valor especificado é maior do que o total")
+        } else if (ammount <= 0) {
+            console.log("O valor deve ser um número positivo");
+        }
+        else {
+            bank -= ammount;
+            console.log(`Voce transferiu ${ammount} reais`);
+            console.log(`Agora o valor total no banco é: ${bank} reais`)
+        }
+    prompt.close()
+
+    })
+
+
+-------------------------------------------------------------------
+
+const performance = "muito bom"
+const baseSalary = 50000
+let bonus = 0
+
+if (performance === "ótimo") {
+    bonus = baseSalary * 0.2
+} else if (performance === "Muito bom") {
+    bonus = baseSalary * 0.15
+} else if (performance === "Bom") {
+    bonus = baseSalary * 0.1
+} else if (performance === "regular") {
+    bonus = baseSalary * 0.5
+} else {
+    console.log("Meta não alcançada. Sem bônus nesta semana.")
+}
+
+    console.log(`Bônus calculado: $${bonus .toFixed(2)}`) 
+
+    ------------MEU PROGRAMA TESTE-------------
+    /*let number = 0
+if (number > 0) {
+    console.log("O número é positivo.")
+} else if ( number < 0 ) {
+    console.log("O número é negativo.")
+} else {
+    console.log("Número igual a zero.")
+}*/
+
+const usuario = "Mateus"
+const senha = "1234"
+
+let usuarioDigitado = "Mateus"
+let senhaDigitada = "1234"
+
+if (usuarioDigitado === usuario && senhaDigitada === senha) {
+    console.log("Login bem-sucedido.");
+
+    }else if (usuarioDigitado === usuario && senhaDigitada !== senha) {
+        console.log("Senha incorreta")
+
+    }else if (senhaDigitada === senha && usuarioDigitado !== usuario) {
+        console.log("Usuario não encontrado.")
+    }else  {
+        console.log("Usuario e senha incorretos.")
+    }
+ 

@@ -1,0 +1,119 @@
+// ESTRUTURA CONDICIONAL switch
+
+// switch (valor) {
+//        case "esperado" : {
+//
+//
+//
+//          break;
+//   }
+// }                                     utilizamos o switch quando esperamos encontrar diversos valores para essa variavel (animal)
+//                                       quando houver mais de um case, é necessário que haja um break no final de cada caso
+
+/*
+
+const stuff = "enxada"
+
+switch(stuff){
+    case "vaca":
+    case "cavalo":
+    case "passaro":
+    case "gato":{
+        console.log("animal");
+        break;                           //quando o valor da variavel encontra a propriedade do case, precisa encontrar o break para parar de procurar por mais cases. E executar a proxima instrucao no codigo. 
+    }
+    case "enxada":
+    case "martelo":
+    case "machado":
+    case "pá":{
+        console.log("ferramenta");
+        break;
+    }
+    case "xis":
+    case "salmão":
+    case "hamburguer":
+    case "pizza":{
+        console.log("comida");
+        break;
+    }
+    default:{                            // quando o valor da variavel nao é reconhecido por nenhum case
+        console.log("Não listado")
+    }
+
+}*/
+
+
+const readline = require("readline");
+const prompt = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
+console.log("Bem vindo ao meu prgrama!");
+console.log("[1] Data atual");
+console.log("[2] Horario atual");
+console.log("[3] Ver animais"); 
+console.log("[4] Ver comidas"); 
+console.log("[5] Ver linguagens");
+console.log("[0] Sair");
+
+prompt.question("> Selecione o que deseja fazer: ", answer => {
+    switch(answer){
+        case "1":{
+            const date = new Date();
+            const day = date.getDate();
+            const month = date.getMonth()+1;
+            const year = date.getFullYear();
+            console.log(`Hoje é ${day}/${month}/${year} `)
+            break;
+        }
+        case "2":{
+            const date = new Date();
+            const hours= date.getHours();
+            const minutes = date.getMinutes();
+            console.log(`Agora são ${hours}:${minutes}`)
+            break;
+        }
+        case "3":{
+            console.log("Vaca");
+            console.log("Gato");
+            console.log("Galinha");
+            console.log("Cachorro");
+            break;
+        }
+        case "4":{
+            console.log("Pizza");
+            console.log("Xis");
+            console.log("Hamburguer");
+            console.log("Sushi");
+            break;
+        }
+        case "5":{
+            console.log("JavaScript");
+            console.log("Phyton");
+            console.log("Java");
+            console.log("Node.js");
+            break;
+        }
+        default: {
+            console.log("Fim do programa.")
+        }
+    }
+    prompt.close();
+})
+
+const value = "47"
+
+switch (value) {
+    case "18":{
+        console.log("Número válido.")
+        break;    
+    }
+    case "10" :{ 
+        console.log("Número válido.")
+        break;
+    }
+    default: { 
+        console.log("Número inválido.")
+    }
+}

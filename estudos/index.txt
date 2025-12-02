@@ -1,0 +1,322 @@
+// variaveis
+//const let 
+
+const string = "Este e um texto"
+const number = 22
+const boolean = true
+const array = []
+const object = {}
+const func = () => {}
+const date = new Date()
+
+var define uma variavel global. acessada fora do escopo onde foi criada.
+
+// sempre usar const: de acordo com a convenca do javascript
+-------------------------------------------------------------------------------------------------------
+
+// ❌Má Práticas 
+
+//Nomes em outros idiomas (pt-br, spanish) only english
+//abreviacoes - const txt
+//enumeracao - const text1
+//incoerencia - const text = 3422 <<<< o nome era texto e a definicao foi numero
+-------------------------------------------------------------------------------------------------------
+
+
+// ✅ boas praticas de variaveis
+
+// nomes em ingles
+//evitar numerar
+//camelCase - a palavra seguinte incia com uma letraMaiúscula
+//Nome explicativo
+//nao economize caractere para escrever as variaveis
+
+const username = "Mateusdev"
+
+const isActive = true
+
+const savedCatsAmount = 450
+
+const mainAppDirectoryPath = "src/main"
+
+const processCurrentWorkDirectory = process.cwd()
+
+// quando o file é executado, o node le o file de cima para baixo 
+
+// palavras reservadas nao podem ser usadas em variaveis
+
+-------------------------------------------------------------------------------------------------------
+// Aritméticos
+
+//     +       adicao
+//     -       subtracao
+//     *       multiplicacao
+//     /       divisao
+//     %       modulo                           rest e o restante da divisao: 10/3=9 entao: rest = 1
+
+
+const sum = 28 + 2
+const sub = 14 - 3
+const mult = 1009 * 2 
+const div = 10/2
+const rest = 10 % 3 
+
+
+
+console.log(sum)
+console.log(sub)
+console.log(div) 
+console.log(mult)
+console.log(rest) 
+-------------------------------------------------------------------------------------------------------
+
+//programa demonstracao 
+
+const price = 340 
+const percentage = 25 
+
+const discount = (price * percentage) /100
+const finalPrice = price - discount 
+
+    console.log("Preço do produto:", price)
+    console.log("Valor do desconto:", discount)
+    console.log("Preço final:", finalPrice)
+
+-------------------------------------------------------------------------------------------------------
+
+// Atribuição
+
+
+//        =        Atribuicao simples
+//        +=       Atribuicao combinada
+//        -=       Subtracao combinada
+//        *=       Multiplicacao combinada
+//        /=       Divisao Combinada
+
+let price = 300
+console.log(price)
+
+price += 50
+console.log(price)
+
+-------------------------------------------------------------------------------------------------------
+// Comparacao
+// retorna apenas boolenos, ou seja: true, false 
+
+//         > Maior que 
+//         < Menor que
+//         >= Maior ou igual a
+//         <= menor ou igual a 
+
+//         == igual a 
+//         === Estritamente igual a (iguais em tipo, e em valor)
+//         != Diferente de 
+//         !== Estritamente diferente de 
+
+/*
+console.log(50 > 300)    false
+console.log(4 >= 4)      true
+console.log(4 >= 5)      false
+*/
+
+//console.log(2=== 2)
+
+const action = "add"
+
+    console.log(action === "add")
+    console.log(action !=="remove")
+
+-------------------------------------------------------------------------------------------------------
+
+
+    // LOGICOS
+// OPERADORES LOGICOS
+
+//    &&    AND                  ambos os valores precisam ser verdadeiros para retornar um "true"
+//    ||    OR                   retorna true quando apenas um dos valores for verdadeiro
+//    !     NOT                  inverte o valor "isOpen= true" !isOpen= false
+
+console.log("|| OU (OR)")
+console.log("🎂 e 🍕")
+
+    console.table([
+    ["🎂", "🍕", true],
+    ["❌", "🍕", true],
+    ["🎂", "❌", true],
+    ["❌", "❌", false],   
+    ])
+
+    const cake = true
+    const pizza = true
+
+    console.log(cake || pizza)
+
+----------------
+
+console.log("! NÃO (NOT)")
+console.log("🚪")
+
+const isOpen = false
+
+console.log(!isOpen)
+
+-------------------------------------------------------------------------------------------------------
+
+
+//tarefas basicas
+const takeBath = true
+const brushTeeth = true 
+
+const isReady = takeBath && brushTeeth;
+
+//se quiser ir na festa
+const washDishes = false
+const doHomework = true
+
+const canPlay = washDishes || doHomework
+
+
+console.log(
+    (takeBath && brushTeeth)
+    && 
+    (washDishes || doHomework)
+)
+
+-------------------------------------------------------------------------------------------------------
+// Ternário
+    
+
+//    (retorna um boleano)     (retorna este valor)           (retorna este valor)
+//       (expressão)      ?      (se verdadeiro)          :       (se falso)
+
+const number = 5 
+console.log((number % 5 === 0) ? "Par" : "Ímpar")
+
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,17 @@
+const rl = require("node:readline")
+
+const prompt = createInterface ({ 
+    input: ProcessingInstruction.stdin,
+    output: ProcessingInstruction.stdout,
+})
+
+let name;
+
+prompt.question ("Qual é o seu nome? ", answer => {
+    name = answer;
+    prompt.close()
+} )
+
+prompt.on("close", () => {
+    console.log("Seja bem vindo", name)
+})

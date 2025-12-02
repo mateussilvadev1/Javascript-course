@@ -1,0 +1,69 @@
+ // LOGICOS
+// OPERADORES LOGICOS
+
+//    &&    AND                  ambos os valores precisam ser verdadeiros para retornar um "true"
+//    ||    OR                   retorna true quando apenas um dos valores for verdadeiro
+//    !     NOT                  inverte o valor "isOpen= true" !isOpen= false
+
+console.log("|| OU (OR)")
+console.log("🎂 e 🍕")
+
+    console.table([
+    ["🎂", "🍕", true],
+    ["❌", "🍕", true],
+    ["🎂", "❌", true],
+    ["❌", "❌", false],   
+    ])
+
+    const cake = true
+    const pizza = true
+
+    console.log(cake || pizza)
+
+----------------
+
+console.log("! NÃO (NOT)")
+console.log("🚪")
+
+const isOpen = false
+
+console.log(!isOpen)
+
+
+
+
+//tarefas basicas
+const takeBath = true
+const brushTeeth = true 
+
+const isReady = takeBath && brushTeeth;
+
+//se quiser ir na festa
+const washDishes = false
+const doHomework = true
+
+const canPlay = washDishes || doHomework
+
+
+console.log(
+    (takeBath && brushTeeth)
+    && 
+    (washDishes || doHomework)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// Ternário
+    
+
+//    (retorna um boleano)     (retorna este valor)           (retorna este valor)
+//       (expressão)      ?      (se verdadeiro)          :       (se falso)
+
+const number = 5 
+console.log((number % 5 === 0) ? "Par" : "Ímpar")
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
